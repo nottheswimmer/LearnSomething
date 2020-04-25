@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from flashcards.views import WordAssociationList, WordAssociationSetList
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('words/', WordAssociationList.as_view(), name='words'),
+    path('word_sets/', WordAssociationSetList.as_view(), name='word_sets'),
 ]
+

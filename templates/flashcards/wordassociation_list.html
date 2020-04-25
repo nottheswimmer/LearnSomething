@@ -1,0 +1,14 @@
+{% extends "flashcards/base.html" %}
+
+{% block nav-words-attributes %} active{% endblock %}
+{% block nav-words-extras %} <span class="sr-only">(current)</span>{% endblock %}
+{% block content %}
+    <main role="main" class="container">
+        <h1 class="mt-5">Words</h1>
+        <ul class="list-group list-group-flush">
+            {% for word in object_list %}
+                <li class="list-group-item">{{ word.known_word }} : {{ word.learning_word }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}
