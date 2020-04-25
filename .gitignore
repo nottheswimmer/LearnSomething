@@ -1,0 +1,10 @@
+# IntelliJ
+.idea
+
+# Python
+*.pyc
+venv
+__pycache__
+
+# Data
+*.sqlite3
